@@ -1,11 +1,10 @@
 <?php
-session_start();  // Start the session
+// logout.php
+session_start();
+session_unset(); // Unset all session variables
+session_destroy(); // Destroy the session
 
-// Destroy the session
-session_unset();  // Remove all session variables
-session_destroy();  // Destroy the session
-
-// Redirect to the login page (or home page)
-header("Location: index.html");  // You can change this to wherever you want to redirect the user after logout
+// Redirect to login page
+header('Location: index.html');
 exit();
 ?>
