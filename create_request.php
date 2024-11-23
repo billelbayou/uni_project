@@ -11,7 +11,7 @@ if ($_SESSION['role'] !== 'student') {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $studentId = $_POST['student_id'];
     $studentName = $_POST['student_name'];
-    $description = $_POST['description'];
+    $description = $_POST['student-choice'];
 
     $db = new Database();
     $requestHandler = new Request($db);
